@@ -11,6 +11,7 @@ try:
         database="WebScrape"
     )
 
+
     # Link to the web page
     url = "https://www.speedcomputers.biz/palit-rtx-4060-dual-8gb-gddr6-video-karta/"
     page = requests.get(url)

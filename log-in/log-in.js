@@ -715,5 +715,6 @@ class Gradient {
 			})
 			.filter(Boolean)
 			.map(normalizeColor);
+			
 	}
 }

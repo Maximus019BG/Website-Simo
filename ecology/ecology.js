@@ -12,7 +12,7 @@ function changeColor() {
         u.style.color = "black";
         i.style.color = "black";
         o.style.color = "black";
-      
+
       }
 
       window.onscroll = () => {

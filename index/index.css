@@ -1,11 +1,24 @@
 *{
   margin: 0;
   padding: 0;
+  
  
 }
+
+::-webkit-scrollbar {
+  width: 1vh;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #525252; 
+}
+
+
 body {
     background-color:#0f0f0f;
     font-family: 'Archivo Black', sans-serif;
+   
    
     
 }
@@ -23,7 +36,8 @@ ul {
     list-style: none; 
     display: flex;
     justify-content: space-around;
-    text-align: center;    
+    text-align: center;  
+    
   }
 li { 
     position: relative; 
@@ -31,7 +45,7 @@ li {
    
 }
 li a {
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
     text-decoration: none;
     margin: 0vh;
@@ -43,7 +57,7 @@ li a {
   }
 
  li a.scroll {
-    color: #eef;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -83,29 +97,82 @@ h1{
   font-size: 7vh;
   color: rgb(238, 238, 255);
 }
+.background{
+height: 120%;
+width: 100%;
+position:absolute;
+top: 0;
+z-index: -99999999;
+opacity: 20%;
+
+
+}
+.color {
+  width: 96.4%;
+  height: 5%;
+  background-color: #ffffff;
+  opacity: 30%;
+  padding: 1.8%;
+ 
+  
+}
 .why{
 font-size: 160%;
-margin: 5%;
+margin-left: 3%;
+position: relative;
+margin-top: 16%;
+margin-bottom: 10%;
 
+
+}
+#reason{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+
+}
+#last-why{
+margin-right:3%;
+
+
+}
+#bottom{
+
+margin-top: -7%;
+margin-left: 3%;
+margin-right: 3%;
 
 
 }
 .evenboxinner{
-  
-  
   padding:0 0,5vh;
   background:#bcff1f;
   border:1px solid #222;
-  
+  height: 100%;
   box-shadow:1vh 1vh 0 #808080;
-  
 }
+a{
 
+
+}
 nav.scroll {
   background-color: #bcff1f;
   height: 7vh;
   z-index: 1221;
  
+}
+.typewrite-box{
+  margin-top:20%;
+ margin-bottom: 30%;
+
+
+
+}
+.margin-rep{
+margin-left: -5%;
+
+
+
 }
 #li-section{
 display: flex;

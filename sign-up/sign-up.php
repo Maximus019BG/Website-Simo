@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt = $conn->prepare($insertQuery);
         $stmt->bind_param("ss", $username, $hashedPassword);
         if ($stmt->execute()) {
-            echo "Registration successful. You can now <a href='/log-in/log-in.html'>log in</a>.";//Прехвърляне
+            readfile("D:/SaitOnline/server/Server/htdocs/log-in/log-in.html"); //Прехвърляне
        
         } else {
             echo "Error: " . $stmt->error;
@@ -36,6 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->close();
     $conn->close();
+    
 }
 ?>
-

@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row["password"])) {
             $_SESSION["user_id"] = $row["id"];
             $_SESSION["username"] = $row["username"];
-            header("Location: /index/index.html"); // Прехвърляне
+            readfile("D:/SaitOnline/server/Server/htdocs/index/index.php"); // Прехвърляне
             exit();
         } else {
             echo "Incorrect password. <a href='/log-in/log-in.html'>Try again</a>.";
@@ -37,5 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->close();
     $conn->close();
+    
 }
 ?>

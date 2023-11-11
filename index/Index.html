@@ -7,13 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="/index/index.css">
+    <script src="/index/index.js"></script>
     <title>Where????</title>
 </head>
 
 <body>
+  <div class="color">
   
+  </div>
+  <a href = "/index/index.php"></a>
     <div class="header">
 
         <nav id="navbar">
@@ -22,32 +25,37 @@
         <li><a id="gfg" >Where?</a></li></section>
 <section id="li-section">
         <li><a id="gfg1" href="/ecology/ecology.html">Ecology</a></li>
-        <li><a id="gfg2" href="#">Hardware</a></li>
+        <li><a id="gfg2" href="/hardware/hardware.html">Hardware</a></li>
         <li><a id="gfg3" href="#">Everyday activity </a></li>
             </section>
             <section id="li-section">
-        <li><a id="gfg4" href="/log-in/log-in.html">Sign in </a>
-            <a id="gfg5" href="/sign-up/sign-up.html">Sign up</a></li>
+              <li class='active' style='float:right;'>
+                <php>
+                <?php 
+                session_start();
+                  if($_SESSION['logged']==true){ 
+                      echo $_SESSION["username"];
+                      echo '<a href="logout.php"><span>Logout</span></a></li>';
+                      }
+                  elseif($_SESSION['logged']==false) 
+                      echo '<a href="registerform.html"><span>Login</span></a></li>';
+                  ?</php>
     </section>
       </ul>
     </nav>
 
+ 
+    <img class= "background "src="/images/laptop-iphone-notebook-black-and-white-technology-monochrome-1174754-pxhere.com.jpg">
+  
 
-  <h1>
-    <a href="" class="typewrite" data-period="2000" data-type='[ "This place will help you with your choice", "Please first choose which category to help you with" ]'>
+  <h1 class = "typewrite-box">
+      <a href="" class="typewrite" data-period="2000" data-type='[ "This place will help you with your choice", "Please first choose which category to help you with" ]'>
       <span class="wrap"></span>
+      
     </a>
   </h1>  
    </div>
   
-
-<section class="why">
-  <div class="evenboxinner">
-    <p> The reason</p>
-     <br>
-    <p > Our team decided to build this because we had problem with ...  </p>
-</div>
-
 </section>
 
 
@@ -74,15 +82,15 @@
   </div>
  <!--Slide-->
    <div class="box" data-animation="slideInUp" data-animation-delay=".2s">
-
+    <a href="/ecology/ecology.html">
     <div id="TheHoleButton">  
       <div class="button-wrapper">
-      <button  class="button" type="submit" value="Sign Up">Ecology</button>
+      <button  class="button" type="submit" value="Sign Up"> Ecology</button>
    <div class="button-bg"></div>
   
 
    </div>
-   
+  </a>
 
    
    <div class="vl"> </div>
@@ -112,12 +120,12 @@
     </div>
    <!--Slide-->
      <div class="box" data-animation="slideInUp" data-animation-delay=".2s">
-  
+      <a href="#" >
       <div id="TheHoleButton">  
         <div class="button-wrapper">
         <button  class="button" type="submit" value="Sign Up">Hardware</button>
      <div class="button-bg" id = "button-bg2" ></div>
-    
+        </a>
   
      </div>
      
@@ -144,13 +152,13 @@
       </div>
      <!--Slide-->
        <div class="box" data-animation="slideInUp" data-animation-delay=".2s">
-    
+    <a href="#">
         <div id="TheHoleButton">  
           <div class="button-wrapper">
           <button  class="button" type="submit" value="Sign Up">Activity </button>
        <div class="button-bg" id = "button-bg3"></div>
       
-    
+    </a>
        </div>
        
       
@@ -161,9 +169,49 @@
    
     
    </section>
+  <div class = "margin-rep">
+   <div class="box" data-animation="slideInUp" data-animation-delay=".2s">
+  <section id = "reason">
    
+   <section class="why">
+    <div class="evenboxinner">
+     
+       
+      <p > Our team decided to build this because we had problem with finding an ecology activity for school project. So we thought that we are not the only one with this problem. 
+        So we decided to create this website. </p>
+    </div>
+  </section>
+  <section class="why" >
+  <div class="evenboxinner">
+     
+   
+    <p >  One of the other reasons for creating this website is because we wanted to know the price of a specific hardware product (Nvidia GeForce RTX 4060) but we did not know where to search.
+    </p>
+  </div>
+  
+  </section>
 
-
+  <section class="why" id = "last-why">
+    <div class="evenboxinner">
+       
+      
+      <p >  One of the other reasons for creating this website is because we wanted to know the price of a specific hardware product (Nvidia GeForce RTX 4060) but we did not know where to search.
+      </p>
+    </div>
+    
+    </section>
+  </section>
+ </div>
+</div>
+<section class="why" id="bottom" >
+  <div class="evenboxinner">
+     
+    
+    <p >  One of the other reasons for creating this website is because we wanted to know the price of a specific hardware product (Nvidia GeForce RTX 4060) but we did not know where to search.
+    </p>
+  </div>
+  
+  </section>
 
 </body>
 </html>

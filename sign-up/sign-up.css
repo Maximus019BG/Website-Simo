@@ -4,23 +4,14 @@
     margin: 0;
     border: 0;
     outline: 0;
-    top: -2.2vh;
+   
+    top: -22px;
 }
 body {
  
   
   overflow: hidden;
   font-family: 'Archivo Black', sans-serif;
-}
-#gradient-canvas {
-    width:110vw;
-    height:110vh;
-    --gradient-color-1: #ff0062; 
-    --gradient-color-2: #2c056b; 
-    --gradient-color-3: #fff238;  
-    --gradient-color-4: #ff9361;
-    z-index: -123142; 
-    position:absolute;
 }
 
 
@@ -32,7 +23,7 @@ h1{
 }
 .card {
 
-  height:min-content;
+ height:min-content;
   width: 25%;
   margin-top: 5vw;
   text-align: start;
@@ -106,14 +97,14 @@ margin-top: 7vh;
     position: absolute;
     top: 0;
     left: 0;
-    width: 9.3vw;
+    width: 8.8vw;
     height: 6.8vh;
     background: linear-gradient(
       90deg,
       #ff8038 0%,
       #ff0099 30.43%,
-      #ebee30 68.23%,
-      #ff3939 100%
+      #00ebeb 68.23%,
+      #db00ff 100%
     );
     background-size: 600% 600%;
     border-radius: 5vh;
@@ -163,6 +154,62 @@ margin-top: 7vh;
       background-position: 0% 50%;
     }
   }
+  p {
+   position: relative;
+   font-size:1.3vh;
+   
+
+  }
+  a{
+   text-decoration: none;
+   font-size:1.5vh;
+  
+  }
+#gradient-canvas {
+  width:110vw;
+  height:110vh;
+  --gradient-color-1: #ff0062; 
+  --gradient-color-2: #2c056b; 
+  --gradient-color-3: #fff238;  
+  --gradient-color-4: #ff9361;
+  z-index: -123142; 
+  position:absolute;
+}
+
+
+  @-webkit-keyframes AnimateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes AnimateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes AnimateBorder {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   p{
 position: relative;
 font-size: 1.3vh;
@@ -172,6 +219,31 @@ font-size: 1.3vh;
   a{
     text-decoration: none;
     font-size:1.5vh;
- 
- 
    }
+   
+
+
+  
+  .button-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9.3vw;
+    height: max(6.7vh);
+    background: linear-gradient(
+      90deg,
+      #ff8038 0%,
+      #ff0099 30.43%,
+      #ebee30 68.23%,
+      #ff3939 100%
+    );
+    background-size: 600% 600%;
+    border-radius: 5vh;
+    animation: AnimateBorder 4s ease infinite;
+    -webkit-animation: AnimateBorder 4s ease infinite;
+    -moz-animation: AnimateBorder 4s ease infinite;
+    z-index: -1;
+    transform: translate(-0.2vh, -0.2vh);
+    transition: filter 1s ease-in;
+  }
+  
